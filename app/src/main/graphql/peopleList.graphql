@@ -1,0 +1,13 @@
+query GetAllPeople{
+    allPeople{
+        people{
+            ...PersonFragment
+        }
+    }
+}
+
+fragment PersonFragment on Person{
+    id
+    name
+    birthYear
+}
