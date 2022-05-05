@@ -1,10 +1,26 @@
 package com.ravn.starwarswiki.data
 
+import android.util.Log
 import com.apollographql.apollo3.ApolloClient
+import com.apollographql.apollo3.api.ApolloResponse
+import com.ravn.starwarswiki.GetAllPeopleQuery
+import javax.inject.Inject
 
-class StarwarsRepository {
+//class StarwarsRepository {
+//
+//    private val serveUrl = "https://swapi-graphql.netlify.app/.netlify/functions/index"
+//    //TODO reuse as singleton
+//    private val apolloClient = ApolloClient.Builder().serverUrl(serveUrl).build()
+//
+//    suspend fun getAllPeople() {
+//       var response = apolloClient.query(GetAllPeopleQuery()).execute()
+//
+//        Log.d("jos", " success ${response.data}")
+//    }
+//}
 
-    private val serveUrl = "https://swapi-graphql.netlify.app/.netlify/functions/index"
-    //TODO reuse as singleton
-    private val apolloClient = ApolloClient.Builder().serverUrl(serveUrl).build()
+class StarwarsRepository @Inject constructor(
+
+){
+
 }

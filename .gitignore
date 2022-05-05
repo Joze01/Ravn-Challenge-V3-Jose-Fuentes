@@ -337,3 +337,5 @@ $RECYCLE.BIN/
 # End of https://www.gitignore.io/api/java,linux,macos,windows,android,intellij,androidstudio
 FORME.txt
 .idea/deploymentTargetDropDown.xml
+.idea/codeStyles/codeStyleConfig.xml
+.idea/codeStyles/Project.xml
