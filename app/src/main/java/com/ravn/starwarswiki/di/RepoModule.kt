@@ -1,6 +1,7 @@
 package com.ravn.starwarswiki.di
 
 import com.apollographql.apollo.ApolloClient
+import com.ravn.starwarswiki.network.StarWarsAPI
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -9,12 +10,9 @@ import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
-object NetworkModule {
+object RepoModule {
 
     @Singleton
     @Provides
-    fun providerApollo(): ApolloClient {
-        return ApolloClient.builder()
-            .serverUrl("https://swapi-graphql.netlify.app/.netlify/functions/index").build()
-    }
+    fun providesWebService() = StarWarsAPI()
 }

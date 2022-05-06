@@ -1,4 +1,7 @@
 package com.ravn.starwarswiki.data.model
 
-class PersonModel {
-}
+data class PersonModel(
+    val name: String,
+    val species: String,
+    val planet: String
+)

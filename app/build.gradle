@@ -35,6 +35,7 @@ android {
 
     buildFeatures{
         viewBinding true
+        dataBinding true
     }
 }
 
@@ -59,7 +60,7 @@ dependencies {
     // LiveData
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.4.1"
 
-    //dagger hilt
+    //Hilt
     implementation "com.google.dagger:hilt-android:$hilt_version"
     kapt "com.google.dagger:hilt-android-compiler:$hilt_version"
 
