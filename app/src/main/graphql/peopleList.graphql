@@ -1,13 +1,40 @@
-query GetAllPeople{
-    allPeople{
-        people{
-            ...PersonFragment
+query GetAllPeople($cursor:String){
+    allPeople(first:5, after:$cursor){
+        pageInfo{
+            hasNextPage
+            hasPreviousPage
+            startCursor
+            endCursor
+        }
+        edges{
+            node{
+                id
+                name
+                species{
+                    name
+                }
+                homeworld{
+                    name
+                }
+            }
         }
     }
 }
 
-fragment PersonFragment on Person{
-    id
-    name
-    birthYear
+query GetPersonDetails($id:ID){
+    person(id: $id) {
+        id
+        name
+        eyeColor
+        hairColor
+        skinColor
+        birthYear
+        vehicleConnection{
+            edges{
+                node{
+                    name
+                }
+            }
+        }
+    }
 }

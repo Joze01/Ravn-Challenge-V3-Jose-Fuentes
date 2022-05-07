@@ -11,7 +11,7 @@ android {
 
     defaultConfig {
         applicationId "com.ravn.starwarswiki"
-        minSdk 21
+        minSdk 25
         targetSdk 32
         versionCode 1
         versionName "1.0"
@@ -40,8 +40,11 @@ android {
 }
 
 dependencies {
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     def apollo_version = "3.3.0"
     def coroutines_version = "2.5.11"
+    def paging_version = "3.1.1"
+    def sliding_version = "1.2.0"
 
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.4.1'
@@ -68,6 +71,12 @@ dependencies {
     implementation("com.apollographql.apollo3:apollo-runtime:$apollo_version")
     //Coroutines
     implementation("com.apollographql.apollo:apollo-coroutines-support:$coroutines_version")
+    //Paging
+    implementation("androidx.paging:paging-runtime-ktx:$paging_version")
+    //Sliding panel
+    implementation("androidx.slidingpanelayout:slidingpanelayout:$sliding_version")
+
+
 }
 
 apollo {

@@ -1,23 +1,187 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<androidx.slidingpanelayout.widget.SlidingPaneLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    android:id="@+id/slidingPaneLayout"
+    android:layout_width="280dp"
     android:layout_height="match_parent"
+    android:layout_gravity="start"
     tools:context=".ui.view.MainActivity">
 
-<!--    <ProgressBar-->
-<!--        android:id="@+id/loading"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent" />-->
+    <!--    <ProgressBar-->
+    <!--        android:id="@+id/loading"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent" />-->
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerStarWars"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
-</FrameLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:constraintLayout="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/detailContainer"
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="#FFFFFF"
+        android:paddingHorizontal="15dp">
+
+        <TextView
+            android:id="@+id/tvGeneralInformationName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            android:text="General Information"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            constraintLayout:layout_constraintStart_toStartOf="parent"
+            constraintLayout:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingVertical="10dp"
+            android:paddingRight="5dp"
+            android:text="Eye Color"
+            android:textColor="#676464"
+            android:textSize="18sp"
+            constraintLayout:layout_constraintStart_toStartOf="parent"
+            constraintLayout:layout_constraintTop_toBottomOf="@+id/tvGeneralInformationName" />
+
+        <TextView
+            android:id="@+id/tvEyeColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingVertical="10dp"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            constraintLayout:layout_constraintEnd_toEndOf="parent"
+            constraintLayout:layout_constraintTop_toBottomOf="@+id/tvGeneralInformationName"
+            tools:text="Blue" />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/dividerEye"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            constraintLayout:layout_constraintStart_toStartOf="parent"
+            constraintLayout:layout_constraintTop_toBottomOf="@id/tvEyeColor" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingVertical="10dp"
+            android:text="Hair Color"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            constraintLayout:layout_constraintStart_toStartOf="parent"
+            constraintLayout:layout_constraintTop_toBottomOf="@+id/dividerEye" />
+
+        <TextView
+            android:id="@+id/tvHairColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingVertical="10dp"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            constraintLayout:layout_constraintEnd_toEndOf="parent"
+            constraintLayout:layout_constraintTop_toBottomOf="@+id/dividerEye"
+            tools:text="Black" />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/dividerHair"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            constraintLayout:layout_constraintStart_toStartOf="parent"
+            constraintLayout:layout_constraintTop_toBottomOf="@id/tvHairColor" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingVertical="10dp"
+            android:text="Skin Color"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            constraintLayout:layout_constraintStart_toStartOf="parent"
+            constraintLayout:layout_constraintTop_toBottomOf="@+id/dividerHair" />
+
+        <TextView
+            android:id="@+id/tvSkinColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingVertical="10dp"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            constraintLayout:layout_constraintEnd_toEndOf="parent"
+            constraintLayout:layout_constraintTop_toBottomOf="@+id/dividerHair"
+            tools:text="Yellow" />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/dividerSkin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            constraintLayout:layout_constraintStart_toStartOf="parent"
+            constraintLayout:layout_constraintTop_toBottomOf="@id/tvSkinColor" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingVertical="10dp"
+            android:text="Birth year"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            constraintLayout:layout_constraintStart_toStartOf="parent"
+            constraintLayout:layout_constraintTop_toBottomOf="@+id/dividerSkin" />
+
+        <TextView
+            android:id="@+id/tvBirthYear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingVertical="10dp"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            constraintLayout:layout_constraintEnd_toEndOf="parent"
+            constraintLayout:layout_constraintTop_toBottomOf="@+id/dividerSkin"
+            tools:text="Yellow" />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/dividerBirth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            constraintLayout:layout_constraintStart_toStartOf="parent"
+            constraintLayout:layout_constraintTop_toBottomOf="@id/tvBirthYear" />
+
+        <TextView
+            android:id="@+id/tvVehicles"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vehicles"
+            android:paddingTop="20dp"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            constraintLayout:layout_constraintStart_toStartOf="parent"
+            constraintLayout:layout_constraintTop_toBottomOf="@+id/dividerBirth" />
+
+        <ListView
+            android:id="@+id/lvVehicles"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            constraintLayout:layout_constraintStart_toStartOf="parent"
+            constraintLayout:layout_constraintTop_toBottomOf="@+id/tvVehicles">
+
+        </ListView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.slidingpanelayout.widget.SlidingPaneLayout>
