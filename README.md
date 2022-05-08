@@ -4,6 +4,14 @@
 * Clone the project
 * Build it
 
+## Project Description
+* Android app that consumes SWAPI throug graphQL, Direct endpoint: https://swapi-graphql.netlify.app/.netlify/functions/index
+
+## Screenshots
+![image1](https://user-images.githubusercontent.com/16228757/167276282-276221be-0a7c-4917-8b1d-beb37b291a1b.png)
+
+![image2](https://user-images.githubusercontent.com/16228757/167276289-d85363dd-be35-4c18-9e20-59f54b7c1d54.png)
+
 ## Dependencies
 *   Fragment
     implementation "androidx.fragment:fragment-ktx:1.4.1"
